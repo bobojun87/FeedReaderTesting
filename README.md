@@ -10,7 +10,8 @@
 it('are defined', function() {
     expect(allFeeds).toBeDefined();
     expect(allFeeds.length).not.toBe(0);
-});```
+});
+```
 
 * 测试遍历 `allFeeds` 对象里面的所有的源来保证有链接字段而且链接不是空的
 ```js
@@ -20,7 +21,8 @@ it('all url exist and not empty', function(){
         expect(data.url.length).not.toBe(0);
     });
 
-});```
+});
+```
 
 * 测试遍历 `allFeeds` 对象里面的所有的源来保证有名字字段而且不是空的
 ```js 
