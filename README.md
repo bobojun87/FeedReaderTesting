@@ -6,41 +6,41 @@
 
 ## 具体实现
 * 测试 `allFeeds` 变量被定义了而且不是空的
-``js
+```js
 it('are defined', function() {
     expect(allFeeds).toBeDefined();
     expect(allFeeds.length).not.toBe(0);
-});``
+});```
 
 * 测试遍历 `allFeeds` 对象里面的所有的源来保证有链接字段而且链接不是空的
-``js
+```js
 it('all url exist and not empty', function(){
     allFeeds.forEach(function(data){
         expect(data.url).toBeDefined();
         expect(data.url.length).not.toBe(0);
     });
 
-});``
+});```
 
 * 测试遍历 `allFeeds` 对象里面的所有的源来保证有名字字段而且不是空的
-``js 
+```js 
 it('all name exist and not empty', function(){
     allFeeds.forEach(function(data){
         expect(data.name).toBeDefined();
         expect(data.name.length).not.toBe(0);
     });
 });
-``
+```
 
 * 测试菜单元素默认是隐藏的
-``js 
+```js 
 it('slide-menu hidden by default', function(){
     expect($('.menu-hidden').length).not.toBe(0);
 });
-``
+```
 
 * 测试保证当菜单图标被点击的时候菜单会切换可见状态
-``js 
+```js 
 it('click menu-icon-link switch the visible of slide-menu', function(){
     //第一次点击按钮测试菜单显示
     $('.menu-icon-link').click();
@@ -50,10 +50,10 @@ it('click menu-icon-link switch the visible of slide-menu', function(){
     $('.menu-icon-link').click();
     expect($('.menu-hidden').length).not.toBe(0);
 });
-``
+```
 
 * 测试保证 `loadFeed` 函数被调用而且工作正常
-``js 
+```js 
 var entryLength;
 
 beforeEach(function(done){
@@ -75,10 +75,10 @@ it('should be Initial loadFeed', function(done){
 afterEach(function() {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
 });
-``
+```
 
 * 测试保证当用 `loadFeed` 函数加载一个新源的时候内容会真的改变
-``js 
+```js 
 var feedUdacity, 
     feedCss;
 
@@ -109,4 +109,4 @@ it('content changed success', function(done){
 afterEach(function(){
     jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
 });
-``
+```
